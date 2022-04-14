@@ -2,6 +2,78 @@
 <html>
 <head>
   <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@3.0.0-rc.5/dist/web3.min.js"></script>
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+		window.addEventListener('load', async () => {
+			await connect();
+		});
+		
+		const connect =  async () => {
+		
+			const endpoint = 'https://tlos.domains';
+			
+			const rpcURL = 'https://testnet.telos.net/evm';
+
+			const web3Provider = new Web3.providers.HttpProvider(rpcURL);
+
+			window.web3 = new Web3(web3Provider);
+			
+			try {
+				
+				  var fetchABI = async () =>
+				  {
+						const d = new Date();
+						var response = await fetch(endpoint + '/contract/Web3Domains.json');
+						const result = await response.json();
+						const abi = result.abi;
+						return abi;
+				  };
+
+				  var abi = await fetchABI();
+				
+				  var contractLoad = new web3.eth.Contract(
+									  abi,
+									  currentNetwork.contactAddress
+				  
+				  if (contractLoad == null)
+				  {
+					return;
+				  }
+				  
+				  var domain = 'telos.tlos';
+				  var currentAddress = '';
+				  
+				  //Get Owner Address by domain name
+				  var owner = await contractLoad.methods.getOwer(domain).call();
+				  console.log(owner);
+				  
+				  //Get domain default from address
+				  var domainDefault = await contractLoad.methods.reverseOf(currentAddress).call();
+                  console.log(domainDefault);
+				  
+				  //Get Metatada
+				  var key = 'avatar';
+
+			      var tokenId = await contractLoad.methods.genTokenId(domain).call();
+                  var value = await contractLoad.methods.get(key, tokenId);
+
+				  console.log(value);
+				  
+				  //Get Multi Metatada
+				  var keys = ['website','twitter'];
+
+
+			      var tokenId = await contractLoad.methods.genTokenId(domain).call();
+                  var values = await contractLoad.methods.getMany(keys, tokenId);
+
+
+				  console.log(values);
+
+				 
+				  
+			} catch (err) {
+	
+			}
+		};
+  </script>
 </head>
 </html>

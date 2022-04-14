@@ -13,7 +13,7 @@ const tlos = require('TlosDomainJS');
 
 const options = 
 {
-	testnet: "https://testnet.telos.net/evm"
+     testnet: "https://testnet.telos.net/evm"
 }
 
 let sdk = tlos.SDK(options);
@@ -24,6 +24,21 @@ let addressInfo = await sdk.getOwner(domain);
 
 // Get a domain default from address
 var address = ''
-let info = await sdk.getDomain(domain);
+let info = await sdk.getDomain(address);
+
+// Get all domain from address
+var address = ''
+let infos = await sdk.getDomains(address);
+
+// Get metadata
+var key = 'avatar';
+let value = await sdk.getMetadata(key, domain);
+
+// Get multi metadata
+var keys = ['avatar','twitter'];
+let values = await sdk.getMetadatas(keys, domain);
+
+// hashname
+let hashname = await sdk.hashname(domain);
 
 ```

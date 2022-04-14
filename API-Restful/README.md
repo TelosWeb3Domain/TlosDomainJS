@@ -1,6 +1,6 @@
-## Restful API
+## API Restful 
 
-### Root Url: 
+### Root Endpoint: 
 
 https://app.tlos.domains
 

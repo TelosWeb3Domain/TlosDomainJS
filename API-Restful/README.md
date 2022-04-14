@@ -80,12 +80,12 @@ Endpoint: /api/domains/getDomains?address=0x3c16183c1c0e28f1a0cb9f8ee4b21d0db2&n
     message: "Success",
     data: [
         { 
-            "domain": "astarnetwork.astr",
+            "domain": "telos.tlos",
             "createtime": "",
             "setDefault":true
         },
         { 
-            "domain": "astar.astr",
+            "domain": "telosevm.tlos",
             "createtime": "",
             "setDefault":false
         },

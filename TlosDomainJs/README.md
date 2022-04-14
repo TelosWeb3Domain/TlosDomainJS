@@ -23,7 +23,7 @@ const options =
 let sdk = tlos.SDK(options);
 
 // Resolve domain to get the address of the owner.
-var domain = 'telos'
+var domain = 'telos.tlos'
 let addressInfo = await sdk.getOwner(domain);
 
 // Get a domain default from address

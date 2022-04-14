@@ -1,4 +1,4 @@
-## Restful API for Astar Domains
+## Restful API
 
 ### Root Url: 
 

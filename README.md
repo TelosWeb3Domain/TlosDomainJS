@@ -1,4 +1,4 @@
-# TlosDomainJS
+# TlosDomainSDK
 
 SDK for 3rd parties to integrate
 

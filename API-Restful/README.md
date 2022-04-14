@@ -124,7 +124,7 @@ Endpoint: /api/domains/getMetadata?key=website,twitter&domain=telos.tlos&network
 ### Gen hashname
 Namehash is a recursive process that can generate a unique hash for any valid domain name.
 
-https://app.astr.domains/api/domains/hashname?domain=hello.tlos&&network=testnet
+Endpoint: /api/domains/hashname?domain=hello.tlos&&network=testnet
 
 **Method: GET**
 

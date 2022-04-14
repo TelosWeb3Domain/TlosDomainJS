@@ -5,8 +5,7 @@
 ```
 npm install TlosDomainJS
 ```
-
-#### Need to install web3js library:
+Need to install web3js library:
 ```
 npm install web3
 ```

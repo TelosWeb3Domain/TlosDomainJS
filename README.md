@@ -1,6 +1,6 @@
 # TlosDomainJS
 
-SDK for 3rd parties to integrate Tlos into their systems such as: Wallet, defi, dapp ..
+SDK for 3rd parties to integrate
 
 **Main fuction:**
 

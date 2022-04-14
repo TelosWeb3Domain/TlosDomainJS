@@ -3,10 +3,15 @@
 ### Install Package
 
 ```
-npm i TlosDomainJS
+npm install TlosDomainJS
 ```
 
-### Setup
+#### Need to install web3js library:
+```
+npm install web3
+```
+
+### Begin
 
 ```
 const tlos = require('TlosDomainJS');
